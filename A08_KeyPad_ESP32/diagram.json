@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Khalid Mardi El Hilali",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-v1", "id": "esp", "top": 45.28, "left": -139.2, "attrs": {} },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -232.4, "left": 34.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "keypad1:R1", "esp:D19", "green", [ "v0" ] ],
+    [ "keypad1:R2", "esp:D18", "green", [ "v0" ] ],
+    [ "keypad1:R3", "esp:D5", "green", [ "v0" ] ],
+    [ "keypad1:R4", "esp:TX2", "green", [ "v0" ] ],
+    [ "keypad1:C1", "esp:RX2", "blue", [ "v0" ] ],
+    [ "keypad1:C2", "esp:D4", "blue", [ "v0" ] ],
+    [ "keypad1:C3", "esp:D15", "blue", [ "v0" ] ],
+    [ "keypad1:C4", "esp:D2", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
